@@ -38,7 +38,7 @@ public class PositionEyesOnScreen : MonoBehaviour {
         //var ray = new Ray(AveragePoint2D, cam.transform.forward);
         //Ray ray = Camera.main.ScreenPointToRay(averagePoint.transform.position);
 
-        if (Physics.Raycast(averagePoint.transform.position, cam.transform.forward, out hit, 1000000))
+        if (Physics.Raycast(cam.WorldToScreenPoint(averagePoint.transform.position), cam.transform.forward, out hit, 1000000))
         {
             Debug.Log("There is something in front of the object!");
             Debug.Log(hit.transform.gameObject.name);

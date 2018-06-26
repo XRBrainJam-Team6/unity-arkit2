@@ -1,0 +1,488 @@
+fileFormatVersion: 2
+guid: 27ca67198d22241fe9625a1d7b3467a6
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Face
+    100002: Face1
+    100004: FAce2
+    100006: Facecopy
+    100008: FaceDown
+    100010: FaceDown1
+    100012: FaceMesh
+    100014: FaceMesh 1
+    100016: FaceTop
+    100018: FaceTop 1
+    100020: group1
+    100022: imagePlane1
+    100024: LefGear
+    100026: LefGear 1
+    100028: LeftBackEye
+    100030: LeftBackEye 1
+    100032: LeftCheeck
+    100034: LeftCheeck 1
+    100036: LeftEye
+    100038: LeftEye 1
+    100040: LeftEyeBrow
+    100042: LeftEyeBrow 1
+    100044: Mask
+    100046: Mask 1
+    100048: Mesh2
+    100050: Mesh3
+    100052: pasted__Face
+    100054: pasted__FaceMesh
+    100056: pasted__FaceMesh1
+    100058: pasted__LefGear
+    100060: pasted__LefGear 1
+    100062: pasted__LeftBackEye
+    100064: pasted__LeftBackEye 1
+    100066: pasted__LeftCheeck
+    100068: pasted__LeftCheeck1
+    100070: pasted__LeftEye
+    100072: pasted__LeftEye1
+    100074: pasted__LeftEyeBrow
+    100076: pasted__LeftEyeBrow1
+    100078: pasted__Mask
+    100080: pasted__Mask1
+    100082: pasted__Mouth
+    100084: pasted__Mouth1
+    100086: pasted__Mouth2
+    100088: pasted__RightBackEye
+    100090: pasted__RightBackEye 1
+    100092: pasted__RightCheek
+    100094: pasted__RightCheek1
+    100096: pasted__RightEye
+    100098: pasted__RightEye1
+    100100: pasted__RightEyeBrow
+    100102: pasted__RightEyeBrow1
+    100104: pasted__RightGear
+    100106: pasted__RightGear 1
+    100108: pCube1
+    100110: pCube2
+    100112: pCylinder1
+    100114: pCylinder11
+    100116: pCylinder12
+    100118: pCylinder15
+    100120: pCylinder17
+    100122: pCylinder18
+    100124: pCylinder19
+    100126: pCylinder20
+    100128: pCylinder21
+    100130: pCylinder22
+    100132: pCylinder23
+    100134: pCylinder3
+    100136: pCylinder4
+    100138: pCylinder5
+    100140: pCylinder8
+    100142: pCylinder9
+    100144: pSphere12
+    100146: pSphere13
+    100148: pSphere2
+    100150: pSphere4
+    100152: pSphere5
+    100154: pSphere8
+    100156: pSphere9
+    100158: RightBackEye
+    100160: RightBackEye 1
+    100162: RightCheek
+    100164: RightCheek 1
+    100166: RightEye
+    100168: RightEye 1
+    100170: RightEyeBrow
+    100172: RightEyeBrow 1
+    100174: RightGear
+    100176: RightGear 1
+    100178: //RootNode
+    100180: transform1
+    100182: transform10
+    100184: transform11
+    100186: transform12
+    100188: transform13
+    100190: transform14
+    100192: transform15
+    100194: transform16
+    100196: transform17
+    100198: transform18
+    100200: transform19
+    100202: transform2
+    100204: transform20
+    100206: transform21
+    100208: transform22
+    100210: transform23
+    100212: transform24
+    100214: transform25
+    100216: transform26
+    100218: transform27
+    100220: transform28
+    100222: transform29
+    100224: transform3
+    100226: transform30
+    100228: transform31
+    100230: transform32
+    100232: transform33
+    100234: transform34
+    100236: transform35
+    100238: transform36
+    100240: transform37
+    100242: transform38
+    100244: transform39
+    100246: transform4
+    100248: transform5
+    100250: transform6
+    100252: transform7
+    100254: transform8
+    100256: transform9
+    400000: Face
+    400002: Face1
+    400004: FAce2
+    400006: Facecopy
+    400008: FaceDown
+    400010: FaceDown1
+    400012: FaceMesh
+    400014: FaceMesh 1
+    400016: FaceTop
+    400018: FaceTop 1
+    400020: group1
+    400022: imagePlane1
+    400024: LefGear
+    400026: LefGear 1
+    400028: LeftBackEye
+    400030: LeftBackEye 1
+    400032: LeftCheeck
+    400034: LeftCheeck 1
+    400036: LeftEye
+    400038: LeftEye 1
+    400040: LeftEyeBrow
+    400042: LeftEyeBrow 1
+    400044: Mask
+    400046: Mask 1
+    400048: Mesh2
+    400050: Mesh3
+    400052: pasted__Face
+    400054: pasted__FaceMesh
+    400056: pasted__FaceMesh1
+    400058: pasted__LefGear
+    400060: pasted__LefGear 1
+    400062: pasted__LeftBackEye
+    400064: pasted__LeftBackEye 1
+    400066: pasted__LeftCheeck
+    400068: pasted__LeftCheeck1
+    400070: pasted__LeftEye
+    400072: pasted__LeftEye1
+    400074: pasted__LeftEyeBrow
+    400076: pasted__LeftEyeBrow1
+    400078: pasted__Mask
+    400080: pasted__Mask1
+    400082: pasted__Mouth
+    400084: pasted__Mouth1
+    400086: pasted__Mouth2
+    400088: pasted__RightBackEye
+    400090: pasted__RightBackEye 1
+    400092: pasted__RightCheek
+    400094: pasted__RightCheek1
+    400096: pasted__RightEye
+    400098: pasted__RightEye1
+    400100: pasted__RightEyeBrow
+    400102: pasted__RightEyeBrow1
+    400104: pasted__RightGear
+    400106: pasted__RightGear 1
+    400108: pCube1
+    400110: pCube2
+    400112: pCylinder1
+    400114: pCylinder11
+    400116: pCylinder12
+    400118: pCylinder15
+    400120: pCylinder17
+    400122: pCylinder18
+    400124: pCylinder19
+    400126: pCylinder20
+    400128: pCylinder21
+    400130: pCylinder22
+    400132: pCylinder23
+    400134: pCylinder3
+    400136: pCylinder4
+    400138: pCylinder5
+    400140: pCylinder8
+    400142: pCylinder9
+    400144: pSphere12
+    400146: pSphere13
+    400148: pSphere2
+    400150: pSphere4
+    400152: pSphere5
+    400154: pSphere8
+    400156: pSphere9
+    400158: RightBackEye
+    400160: RightBackEye 1
+    400162: RightCheek
+    400164: RightCheek 1
+    400166: RightEye
+    400168: RightEye 1
+    400170: RightEyeBrow
+    400172: RightEyeBrow 1
+    400174: RightGear
+    400176: RightGear 1
+    400178: //RootNode
+    400180: transform1
+    400182: transform10
+    400184: transform11
+    400186: transform12
+    400188: transform13
+    400190: transform14
+    400192: transform15
+    400194: transform16
+    400196: transform17
+    400198: transform18
+    400200: transform19
+    400202: transform2
+    400204: transform20
+    400206: transform21
+    400208: transform22
+    400210: transform23
+    400212: transform24
+    400214: transform25
+    400216: transform26
+    400218: transform27
+    400220: transform28
+    400222: transform29
+    400224: transform3
+    400226: transform30
+    400228: transform31
+    400230: transform32
+    400232: transform33
+    400234: transform34
+    400236: transform35
+    400238: transform36
+    400240: transform37
+    400242: transform38
+    400244: transform39
+    400246: transform4
+    400248: transform5
+    400250: transform6
+    400252: transform7
+    400254: transform8
+    400256: transform9
+    2100000: DrakGrey
+    2100002: lambert1
+    2100004: lambert4
+    2100006: white
+    2100008: Balck
+    2100010: lightgrey
+    2100012: blue
+    2100014: pasted__lambert4
+    2100016: pasted__DrakGrey
+    2100018: pasted__white
+    2100020: pasted__lightgrey
+    2100022: pasted__Balck
+    2100024: pasted__verylightgrey
+    2100026: verylightgrey
+    2300000: Facecopy
+    2300002: FaceDown
+    2300004: FaceDown1
+    2300006: FaceMesh 1
+    2300008: FaceTop
+    2300010: LefGear 1
+    2300012: LeftBackEye 1
+    2300014: LeftCheeck 1
+    2300016: LeftEye 1
+    2300018: LeftEyeBrow 1
+    2300020: Mask 1
+    2300022: Mesh2
+    2300024: Mesh3
+    2300026: pasted__FaceMesh
+    2300028: pasted__LefGear
+    2300030: pasted__LeftBackEye
+    2300032: pasted__LeftCheeck
+    2300034: pasted__LeftEye
+    2300036: pasted__LeftEyeBrow
+    2300038: pasted__Mask
+    2300040: pasted__Mouth
+    2300042: pasted__Mouth2
+    2300044: pasted__RightBackEye
+    2300046: pasted__RightCheek
+    2300048: pasted__RightEye
+    2300050: pasted__RightEyeBrow
+    2300052: pasted__RightGear
+    2300054: pCylinder17
+    2300056: pCylinder18
+    2300058: pCylinder19
+    2300060: pCylinder20
+    2300062: pCylinder21
+    2300064: pCylinder22
+    2300066: pCylinder23
+    2300068: pSphere12
+    2300070: pSphere13
+    2300072: pSphere8
+    2300074: pSphere9
+    2300076: RightBackEye 1
+    2300078: RightCheek 1
+    2300080: RightEye 1
+    2300082: RightEyeBrow 1
+    2300084: RightGear 1
+    3300000: Facecopy
+    3300002: FaceDown
+    3300004: FaceDown1
+    3300006: FaceMesh 1
+    3300008: FaceTop
+    3300010: LefGear 1
+    3300012: LeftBackEye 1
+    3300014: LeftCheeck 1
+    3300016: LeftEye 1
+    3300018: LeftEyeBrow 1
+    3300020: Mask 1
+    3300022: Mesh2
+    3300024: Mesh3
+    3300026: pasted__FaceMesh
+    3300028: pasted__LefGear
+    3300030: pasted__LeftBackEye
+    3300032: pasted__LeftCheeck
+    3300034: pasted__LeftEye
+    3300036: pasted__LeftEyeBrow
+    3300038: pasted__Mask
+    3300040: pasted__Mouth
+    3300042: pasted__Mouth2
+    3300044: pasted__RightBackEye
+    3300046: pasted__RightCheek
+    3300048: pasted__RightEye
+    3300050: pasted__RightEyeBrow
+    3300052: pasted__RightGear
+    3300054: pCylinder17
+    3300056: pCylinder18
+    3300058: pCylinder19
+    3300060: pCylinder20
+    3300062: pCylinder21
+    3300064: pCylinder22
+    3300066: pCylinder23
+    3300068: pSphere12
+    3300070: pSphere13
+    3300072: pSphere8
+    3300074: pSphere9
+    3300076: RightBackEye 1
+    3300078: RightCheek 1
+    3300080: RightEye 1
+    3300082: RightEyeBrow 1
+    3300084: RightGear 1
+    4300000: pCylinder17
+    4300002: pCylinder18
+    4300004: Mesh2
+    4300006: pCylinder19
+    4300008: pSphere8
+    4300010: pCylinder20
+    4300012: pCylinder21
+    4300014: Mesh3
+    4300016: pSphere9
+    4300018: pCylinder22
+    4300020: pCylinder23
+    4300022: pSphere12
+    4300024: pSphere13
+    4300026: pasted__RightEye
+    4300028: pasted__RightGear
+    4300030: pasted__RightBackEye
+    4300032: pasted__LeftEye
+    4300034: pasted__LefGear
+    4300036: pasted__LeftBackEye
+    4300038: pasted__Mouth
+    4300040: pasted__FaceMesh
+    4300042: pasted__Mask
+    4300044: pasted__RightCheek
+    4300046: pasted__RightEyeBrow
+    4300048: pasted__LeftEyeBrow
+    4300050: pasted__LeftCheeck
+    4300052: Facecopy
+    4300054: FaceTop
+    4300056: FaceDown
+    4300058: RightEye
+    4300060: RightGear
+    4300062: RightBackEye
+    4300064: LeftEye
+    4300066: LefGear
+    4300068: LeftBackEye
+    4300070: FaceMesh
+    4300072: Mask
+    4300074: RightCheek
+    4300076: RightEyeBrow
+    4300078: LeftEyeBrow
+    4300080: LeftCheeck
+    4300082: pasted__Mouth2
+    4300084: FaceDown1
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

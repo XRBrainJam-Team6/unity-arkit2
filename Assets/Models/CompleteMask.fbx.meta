@@ -1,0 +1,173 @@
+fileFormatVersion: 2
+guid: fcab2cce8774d47748a057b44afddf1c
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: FaceDown1
+    100004: FaceMesh
+    100006: FaceTop
+    100008: LefGear
+    100010: LeftBackEye
+    100012: LeftCheeck
+    100014: LeftEye
+    100016: LeftEyeBrow
+    100018: Mask
+    100020: pasted__Mouth1
+    100022: pasted__Mouth2
+    100024: RightBackEye
+    100026: RightCheek
+    100028: RightEye
+    100030: RightEyeBrow
+    100032: RightGear
+    100034: transform32
+    400000: //RootNode
+    400002: FaceDown1
+    400004: FaceMesh
+    400006: FaceTop
+    400008: LefGear
+    400010: LeftBackEye
+    400012: LeftCheeck
+    400014: LeftEye
+    400016: LeftEyeBrow
+    400018: Mask
+    400020: pasted__Mouth1
+    400022: pasted__Mouth2
+    400024: RightBackEye
+    400026: RightCheek
+    400028: RightEye
+    400030: RightEyeBrow
+    400032: RightGear
+    400034: transform32
+    2100000: lambert1
+    2100002: lambert4
+    2100004: DrakGrey
+    2100006: white
+    2100008: lightgrey
+    2100010: verylightgrey
+    2100012: pasted__white
+    2100014: pasted__lightgrey
+    2300000: FaceDown1
+    2300002: FaceMesh
+    2300004: LefGear
+    2300006: LeftBackEye
+    2300008: LeftCheeck
+    2300010: LeftEye
+    2300012: LeftEyeBrow
+    2300014: Mask
+    2300016: pasted__Mouth2
+    2300018: RightBackEye
+    2300020: RightCheek
+    2300022: RightEye
+    2300024: RightEyeBrow
+    2300026: RightGear
+    3300000: FaceDown1
+    3300002: FaceMesh
+    3300004: LefGear
+    3300006: LeftBackEye
+    3300008: LeftCheeck
+    3300010: LeftEye
+    3300012: LeftEyeBrow
+    3300014: Mask
+    3300016: pasted__Mouth2
+    3300018: RightBackEye
+    3300020: RightCheek
+    3300022: RightEye
+    3300024: RightEyeBrow
+    3300026: RightGear
+    4300000: RightEye
+    4300002: RightGear
+    4300004: RightBackEye
+    4300006: LeftEye
+    4300008: LefGear
+    4300010: LeftBackEye
+    4300012: FaceMesh
+    4300014: Mask
+    4300016: RightCheek
+    4300018: RightEyeBrow
+    4300020: LeftEyeBrow
+    4300022: LeftCheeck
+    4300024: pasted__Mouth2
+    4300026: FaceDown1
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
