@@ -12,6 +12,7 @@ public class PositionEyesOnScreen : MonoBehaviour {
     public transformation tra;
     public bool markerExists = false;
     public GameObject marker;
+    public UnityEyeManager uym;
 
     // public Transform target;
     public Camera cam;
@@ -24,7 +25,13 @@ public class PositionEyesOnScreen : MonoBehaviour {
         //Vector3 screenPosRightRight = cam.WorldToScreenPoint(RightEye.transform.position);
 
         //Vector3 AveragePoint2D = cam.WorldToScreenPoint(averagePoint.transform.position);
+        Vector3 eyeOrientation = new Vector3(
+            (leftEye.transform.eulerAngles.x + RightEye.transform.eulerAngles.x) / 2f,
+            (leftEye.transform.eulerAngles.y + RightEye.transform.eulerAngles.y) / 2f,
+            (leftEye.transform.eulerAngles.z + RightEye.transform.eulerAngles.z) / 2f
+        );
 
+        averagePoint.transform.eulerAngles = eyeOrientation;
 
         // Debug.Log("averageEyePosition is " + AveragePoint2D);
         //Vector3 fwd = averagePoint.transform.TransformDirection(Vector3.forward);
@@ -38,7 +45,7 @@ public class PositionEyesOnScreen : MonoBehaviour {
         //var ray = new Ray(AveragePoint2D, cam.transform.forward);
         //Ray ray = Camera.main.ScreenPointToRay(averagePoint.transform.position);
 
-        if (Physics.Raycast(cam.WorldToScreenPoint(averagePoint.transform.position), cam.transform.forward, out hit, 1000000))
+        if (Physics.Raycast(averagePoint.transform.position, eyeOrientation, out hit, 1000000))
         {
             Debug.Log("There is something in front of the object!");
             Debug.Log(hit.transform.gameObject.name);

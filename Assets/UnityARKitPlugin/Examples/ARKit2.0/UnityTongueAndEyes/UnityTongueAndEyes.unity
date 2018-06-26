@@ -412,6 +412,7 @@ MonoBehaviour:
   tra: {fileID: 1567336800}
   markerExists: 0
   marker: {fileID: 0}
+  uym: {fileID: 1333776922}
   cam: {fileID: 10}
 --- !u!4 &265775638
 Transform:

@@ -10,8 +10,8 @@ public class UnityEyeManager : MonoBehaviour
     public PositionEyesOnScreen peos;
 
     private UnityARSessionNativeInterface m_session;
-	private GameObject leftEyeGo;
-	private GameObject rightEyeGo;
+	public GameObject leftEyeGo;
+	public GameObject rightEyeGo;
 
 	// Use this for initialization
 	void Start () {
