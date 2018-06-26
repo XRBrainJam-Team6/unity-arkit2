@@ -7,8 +7,9 @@ public class UnityEyeManager : MonoBehaviour
 {
 	[SerializeField]
 	private GameObject eyePrefab;
+    public PositionEyesOnScreen peos;
 
-	private UnityARSessionNativeInterface m_session;
+    private UnityARSessionNativeInterface m_session;
 	private GameObject leftEyeGo;
 	private GameObject rightEyeGo;
 
@@ -33,9 +34,16 @@ public class UnityEyeManager : MonoBehaviour
 		}
 
 		leftEyeGo = GameObject.Instantiate (eyePrefab);
-		rightEyeGo = GameObject.Instantiate (eyePrefab);
+        Debug.Log(peos.leftEye.name);
+        Debug.Log(peos.leftEye.transform.position);
+        Debug.Log(leftEyeGo.transform.position);
 
-		leftEyeGo.SetActive (false);
+
+        peos.leftEye.transform.SetParent(leftEyeGo.transform);
+        rightEyeGo = GameObject.Instantiate (eyePrefab);
+        peos.RightEye.transform.SetParent(rightEyeGo.transform);
+
+        leftEyeGo.SetActive (false);
 		rightEyeGo.SetActive (false);
 
 	}

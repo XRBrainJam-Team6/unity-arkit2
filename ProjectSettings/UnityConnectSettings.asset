@@ -1,21 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!310 &1
-UnityConnectSettings:
-  m_ObjectHideFlags: 0
-  m_Enabled: 0
-  m_TestMode: 0
-  m_TestEventUrl: 
-  m_TestConfigUrl: 
-  CrashReportingSettings:
-    m_EventUrl: https://perf-events.cloud.unity3d.com/api/events/crashes
-    m_Enabled: 0
-  UnityPurchasingSettings:
-    m_Enabled: 0
-    m_TestMode: 0
-  UnityAnalyticsSettings:
-    m_Enabled: 0
-    m_InitializeOnStartup: 1
-    m_TestMode: 0
-    m_TestEventUrl: 
-    m_TestConfigUrl: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:0c18eeb73174251a01efe0601c634c973680d116041be69a5e574b324ad6b02a
+size 481
