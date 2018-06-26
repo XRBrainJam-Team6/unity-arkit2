@@ -10,16 +10,20 @@ public class transformation : MonoBehaviour
     public Renderer objectRenderer;
     public Material mat1;
     public Material mat2;
-    public GameObject[] piecesOfMask;
+    public List<GameObject> piecesOfMask;
     public float numberOfSecondsLookingAtEyes;
     public float numberOfSecondContinous = 0;
     public bool lookingAtEyes;
     public Text counterTextUI;
+    public GameObject head;
+    public float indexOfLastPiece;
+    public ParticleSystem particleSystemWhenPieceIsGone;
 
     // Use this for initialization
     void Start()
     {
         objectRenderer = successmarker.GetComponent<Renderer>();
+        receiveHeadMesh(head);
     }
 
     // Update is called once per frame
@@ -43,5 +47,18 @@ public class transformation : MonoBehaviour
         objectRenderer.material = mat1;
     }
 
+    public void receiveHeadMesh(GameObject head )
+    {
+        foreach (Transform child in head.transform)
+        {
+            piecesOfMask.Add(child.gameObject);
+          //  spawnPoints.Add(child.position);
+        }
+    }
+
+    public void dissapearingPiece()
+    {
+
+    }
 
 }

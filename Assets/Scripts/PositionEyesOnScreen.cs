@@ -6,9 +6,12 @@ public class PositionEyesOnScreen : MonoBehaviour {
 
 
     public GameObject leftEye;
+    public GameObject hitMarkerPrefab;
     public GameObject RightEye;
     public GameObject averagePoint;
     public transformation tra;
+    public bool markerExists = false;
+    public GameObject marker;
 
     // public Transform target;
     public Camera cam;
@@ -40,11 +43,22 @@ public class PositionEyesOnScreen : MonoBehaviour {
             Debug.Log("There is something in front of the object!");
             Debug.Log(hit.transform.gameObject.name);
             tra.lookingAtEyes=true;
+            if (markerExists == false)
+            {
+                marker = GameObject.Instantiate(hitMarkerPrefab);
+                marker.transform.position = hit.point;
+                markerExists = true;
+            }
+            else {
+                marker.SetActive(true);
+                marker.transform.position = hit.point;
+            }
         }
         else
         {
             Debug.Log("hit nothing");
             tra.lookingAtEyes = false;
+            marker.SetActive(false);
         }
     }
 
