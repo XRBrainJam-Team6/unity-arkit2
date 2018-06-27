@@ -80,8 +80,8 @@ public class UnityEyeManager : MonoBehaviour
 		);
 
 		sphere.transform.localPosition = new Vector3(
-			deltaLook.x * 10f,
-			deltaLook.y * 30f + 10f,
+			0f,
+			deltaLook.y * 50f + 0.004f,
 			0f
 		);
 
