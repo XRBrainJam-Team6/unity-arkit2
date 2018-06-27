@@ -12,6 +12,8 @@ public class UnityEyeManager : MonoBehaviour
     private UnityARSessionNativeInterface m_session;
 	public GameObject leftEyeGo;
 	public GameObject rightEyeGo;
+	public GameObject sphere;
+	private Vector3 startupLocation;
 
 	// Use this for initialization
 	void Start () {
@@ -50,6 +52,8 @@ public class UnityEyeManager : MonoBehaviour
 
 	void FaceAdded (ARFaceAnchor anchorData)
 	{
+		startupLocation = anchorData.lookAtPoint;
+		//sphere.transform.position = anchorData.lookAtPoint;
 		leftEyeGo.transform.position = anchorData.leftEyePose.position;
 		leftEyeGo.transform.rotation = anchorData.leftEyePose.rotation;
 
@@ -62,6 +66,19 @@ public class UnityEyeManager : MonoBehaviour
 
 	void FaceUpdated (ARFaceAnchor anchorData)
 	{
+		Vector3 deltaLook = new Vector3(
+			anchorData.lookAtPoint.x - startupLocation.x,
+			anchorData.lookAtPoint.y - startupLocation.y,
+			0f
+		);
+
+		sphere.transform.localPosition = new Vector3(
+			deltaLook.x / 50f,
+			deltaLook.y / 5f + 0.04f,
+			0f
+		);
+
+		Debug.Log(sphere.transform.position);
 		leftEyeGo.transform.position = anchorData.leftEyePose.position;
 		leftEyeGo.transform.rotation = anchorData.leftEyePose.rotation;
 

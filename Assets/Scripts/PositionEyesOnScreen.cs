@@ -19,7 +19,7 @@ public class PositionEyesOnScreen : MonoBehaviour {
 
     void Update()
     {
-        averagePoint.transform.position = new Vector3((leftEye.transform.position.x + RightEye.transform.position.x) / 2, (leftEye.transform.position.y + RightEye.transform.position.y) / 2, (leftEye.transform.position.z + RightEye.transform.position.z) / 2);
+        averagePoint.transform.position = new Vector3((leftEye.transform.position.x + RightEye.transform.position.x) / 2, (leftEye.transform.position.y + RightEye.transform.position.y) / 2, (leftEye.transform.position.z + RightEye.transform.position.z) / 2 - 0.1f);
 
         //Vector3 screenPosEyeLeft = cam.WorldToScreenPoint(leftEye.transform.position);
         //Vector3 screenPosRightRight = cam.WorldToScreenPoint(RightEye.transform.position);
@@ -40,7 +40,6 @@ public class PositionEyesOnScreen : MonoBehaviour {
         //Debug.DrawRay(AveragePoint2D, cam.transform.forward, Color.green);
         //Debug.DrawRay(transform.position, cam.transform.forward, Color.RED);
         Debug.DrawRay(averagePoint.transform.position, cam.transform.forward, Color.red);
-
 
         //var ray = new Ray(AveragePoint2D, cam.transform.forward);
         //Ray ray = Camera.main.ScreenPointToRay(averagePoint.transform.position);
