@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class transformation : MonoBehaviour
 {
     public List<GameObject> piecesOfMask;
-    public float numberOfSecondsLookingAtEyes;
     public float numberOfSecondContinous = 0;
+    public float numberOfSecondLookingAway = 0;
     public bool lookingAtEyes;
     public Text counterTextUI;
     public int indexOfLastPiece;
@@ -17,7 +17,8 @@ public class transformation : MonoBehaviour
     public bool fading = false;
     public bool initialFade = false;
     public bool animationPaused = false;
-
+    public bool robotFinishedVanished = false;
+    public bool finalParticles = false;
     // Use this for initialization
     void Start()
     {
@@ -62,23 +63,59 @@ public class transformation : MonoBehaviour
         {
             numberOfSecondContinous = numberOfSecondContinous + Time.deltaTime;
             counterTextUI.text = numberOfSecondContinous + "";
-            if (numberOfSecondContinous > 5 && initialFade == false)
+            if (robotFinishedVanished == true)
             {
-                startFadingHead();
-                initialFade = true;
+                if (finalParticles == false)
+                {
+                    finalParticles = true;
+                    var main = particleSystemWhenPieceIsGone.main;
+                    main.loop = true;
+
+                    var main2 = particleSystemWhenPieceIsGone2.main;
+                    main.loop = true;
+                    
+                    particleSystemWhenPieceIsGone.Clear();
+                    particleSystemWhenPieceIsGone.time = 0;
+                    particleSystemWhenPieceIsGone.Play();
+                    particleSystemWhenPieceIsGone2.Clear();
+                    particleSystemWhenPieceIsGone2.time = 0;
+                    particleSystemWhenPieceIsGone2.Play();
+                }
             }
-            if (animationPaused == true)
-            {
-                resumePlayingInSameDirectionHead();
-                animationPaused = false;
+            else {            
+                if (numberOfSecondContinous > 5 && initialFade == false)
+                {
+                    startFadingHead();
+                    initialFade = true;
+                }
+                fading = true;
+                if (animationPaused == true)
+                {
+                    resumePlayingInSameDirectionHead();
+                    animationPaused = false;
+                }
             }
+            numberOfSecondLookingAway = 0;
         }
         else {
-            if (initialFade == true && animationPaused == false)
+            numberOfSecondContinous = 0;
+            numberOfSecondLookingAway = numberOfSecondLookingAway + Time.deltaTime;
+            if (numberOfSecondLookingAway < 3)
             {
-                pauseAnimations();
-                animationPaused = true;
+                if (initialFade == true && animationPaused == false)
+                {
+                    pauseAnimations();
+                    animationPaused = true;
+                }
+
             }
+            else {
+                //reverse
+                //reverseFadingAllHead();
+            }
+
+
+           
         }
 
     }
@@ -101,12 +138,32 @@ public class transformation : MonoBehaviour
 
     public void reverseFadingAllHead()
     {
-        for (int i = 0; i < piecesOfMask.Count; i++)
+        fading = false;
+        if (indexOfLastPiece < piecesOfMask.Count)
         {
-           // Animator anim = piecesOfMask[i].GetComponent<Animator>();
-            PauseSingleAnimation(piecesOfMask[i]);
-        }
+            Animator anim = piecesOfMask[indexOfLastPiece].GetComponent<Animator>();
+           /* if (anim.GetFloat == true)
+            {
 
+            }
+            else
+            {
+
+            }
+            */
+            anim.SetFloat("Speed", -1f);
+        }
+        else {
+            Animator anim = piecesOfMask[2].GetComponent<Animator>();
+            anim.SetFloat("Speed", -1f);
+        }
+    }
+
+    public void reverseIndividualPiece(GameObject piece)
+    {
+        Debug.Log("Pause object " + piece.name);
+        Animator anim = piece.GetComponent<Animator>();
+        anim.SetFloat("Speed", -1f);
     }
 
     public void resumePlayingInSameDirectionHead()
@@ -206,6 +263,10 @@ public class transformation : MonoBehaviour
                 particleSystemWhenPieceIsGone2.Clear();
                 particleSystemWhenPieceIsGone2.time = 0;
                 particleSystemWhenPieceIsGone2.Play();
+            }
+            if (index == 3)
+            {
+                robotFinishedVanished = true;
             }
         }
     }

@@ -31,7 +31,7 @@ public class FadingPiece : MonoBehaviour {
     public void finishFading()
     {
         Animator anim = this.GetComponent<Animator>();
-        anim.SetBool("PieceIsFade", true);
+        anim.SetBool("PieceIsFaded", true);
         sentMessage = true;
         StartCoroutine(messageTimeout());
         tr.pieceFinishedFading(index);

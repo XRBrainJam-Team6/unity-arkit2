@@ -6939,7 +6939,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a8c3e1db31510cc4594857f6ed72042e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7460,8 +7460,8 @@ MonoBehaviour:
   - {fileID: 1292386141}
   - {fileID: 1374143488}
   - {fileID: 145832596}
-  numberOfSecondsLookingAtEyes: 0
   numberOfSecondContinous: 0
+  numberOfSecondLookingAway: 0
   lookingAtEyes: 0
   counterTextUI: {fileID: 2051385308}
   indexOfLastPiece: 0
@@ -7470,6 +7470,8 @@ MonoBehaviour:
   fading: 0
   initialFade: 0
   animationPaused: 0
+  robotFinishedVanished: 0
+  finalParticles: 0
 --- !u!4 &1567336801
 Transform:
   m_ObjectHideFlags: 0
@@ -8585,7 +8587,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 142.7, y: -235.1}
+  m_AnchoredPosition: {x: 142.7, y: -107.2}
   m_SizeDelta: {x: 53.43509, y: 97.196045}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2051385308
