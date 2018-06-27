@@ -19,8 +19,6 @@ public class FadingPiece : MonoBehaviour {
         {
             numberToStartAnimation = 2;
             finishFading();
-            sentMessage = true;
-            StartCoroutine(messageTimeout());
         }
 
         if (numberToStartAnimation == -1)
@@ -34,6 +32,8 @@ public class FadingPiece : MonoBehaviour {
     {
         Animator anim = this.GetComponent<Animator>();
         anim.SetBool("PieceIsFade", true);
+        sentMessage = true;
+        StartCoroutine(messageTimeout());
         tr.pieceFinishedFading(index);
     }
 
@@ -47,6 +47,6 @@ public class FadingPiece : MonoBehaviour {
     IEnumerator messageTimeout()
     {
         yield return new WaitForSeconds(2);
-        sentMessage = false;
+        //sentMessage = false;
     }
 }

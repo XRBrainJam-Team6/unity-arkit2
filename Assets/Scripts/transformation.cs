@@ -202,8 +202,7 @@ public class transformation : MonoBehaviour
                 particleSystemWhenPieceIsGone.Clear();
                 particleSystemWhenPieceIsGone.time = 0;
                 particleSystemWhenPieceIsGone.Play();
-
-
+                
                 particleSystemWhenPieceIsGone2.Clear();
                 particleSystemWhenPieceIsGone2.time = 0;
                 particleSystemWhenPieceIsGone2.Play();
