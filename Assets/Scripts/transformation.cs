@@ -94,12 +94,21 @@ public class transformation : MonoBehaviour
                     resumePlayingInSameDirectionHead();
                     animationPaused = false;
                 }
+                Animator anim = piecesOfMask[indexOfLastPiece].GetComponent<Animator>();
+                if (anim.GetBool("PieceIsFaded") == false)
+                {
+                    anim.SetFloat("Speed", 1f);
+                }
             }
             numberOfSecondLookingAway = 0;
         }
         else {
-            numberOfSecondContinous = 0;
+            
             numberOfSecondLookingAway = numberOfSecondLookingAway + Time.deltaTime;
+            if (numberOfSecondLookingAway > 1)
+            {
+                numberOfSecondContinous = 0;
+            }
             if (numberOfSecondLookingAway < 3)
             {
                 if (initialFade == true && animationPaused == false)
@@ -111,7 +120,11 @@ public class transformation : MonoBehaviour
             }
             else {
                 //reverse
-                //reverseFadingAllHead();
+                Animator anim = piecesOfMask[indexOfLastPiece].GetComponent<Animator>();
+                if (anim.GetBool("PieceIsFaded") == false)
+                {
+                    anim.SetFloat("Speed", -1f);
+                }
             }
 
 
