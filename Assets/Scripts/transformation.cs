@@ -108,6 +108,8 @@ public class transformation : MonoBehaviour
             if (numberOfSecondLookingAway > 1)
             {
                 numberOfSecondContinous = 0;
+
+                counterTextUI.text = numberOfSecondContinous + "";
             }
             if (numberOfSecondLookingAway < 3)
             {
