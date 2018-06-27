@@ -45,6 +45,8 @@ public class PositionEyesOnScreen : MonoBehaviour {
         //var ray = new Ray(AveragePoint2D, cam.transform.forward);
         //Ray ray = Camera.main.ScreenPointToRay(averagePoint.transform.position);
 
+
+        /*
         if (Physics.Raycast(averagePoint.transform.position, eyeOrientation, out hit, 1000000))
         {
             Debug.Log("There is something in front of the object!");
@@ -67,6 +69,7 @@ public class PositionEyesOnScreen : MonoBehaviour {
             tra.lookingAtEyes = false;
             marker.SetActive(false);
         }
+        */
     }
 
     public float averageFloat(float x, float y)

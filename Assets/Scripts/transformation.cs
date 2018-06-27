@@ -52,13 +52,8 @@ public class transformation : MonoBehaviour
         foreach (Transform child in head.transform)
         {
             piecesOfMask.Add(child.gameObject);
-          //  spawnPoints.Add(child.position);
         }
     }
-
-    public void dissapearingPiece()
-    {
-
-    }
+    
 
 }
