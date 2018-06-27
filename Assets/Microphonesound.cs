@@ -39,7 +39,7 @@ public class Microphonesound : MonoBehaviour
     private void Update()
     {
         loudness = GetAverageVolume() * sensivity;
-        print(loudness);
+        //print(loudness);
         if (loudness > STATIC.LOUD_FOR_REACT)
         {
             //          float newY = ((loudness - STATIC.LOUD_FOR_REACT) / 100f) * maxY;

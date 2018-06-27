@@ -37,9 +37,9 @@ public class UnityEyeManager : MonoBehaviour
 		}
 
 		leftEyeGo = GameObject.Instantiate (eyePrefab);
-        Debug.Log(peos.leftEye.name);
-        Debug.Log(peos.leftEye.transform.position);
-        Debug.Log(leftEyeGo.transform.position);
+       // Debug.Log(peos.leftEye.name);
+       // Debug.Log(peos.leftEye.transform.position);
+       // Debug.Log(leftEyeGo.transform.position);
 
 
         peos.leftEye.transform.SetParent(leftEyeGo.transform);
@@ -54,7 +54,7 @@ public class UnityEyeManager : MonoBehaviour
 	void FaceAdded (ARFaceAnchor anchorData)
 	{
 		startupLocation = anchorData.lookAtPoint;
-		Debug.Log("startup: " + startupLocation);
+		//Debug.Log("startup: " + startupLocation);
 		// initialSphere.transform.localPosition = new Vector3(
 		// 	startupLocation.x,
 		// 	startupLocation.y,
@@ -85,7 +85,7 @@ public class UnityEyeManager : MonoBehaviour
 			0f
 		);
 
-		Debug.Log("localPosition: " + sphere.transform.localPosition);
+		//Debug.Log("localPosition: " + sphere.transform.localPosition);
 		leftEyeGo.transform.position = anchorData.leftEyePose.position;
 		leftEyeGo.transform.rotation = anchorData.leftEyePose.rotation;
 

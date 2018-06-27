@@ -6,7 +6,8 @@ public class FadingPiece : MonoBehaviour {
 
     public transformation tr;
     public int numberToStartAnimation;
-
+    public int index =0;
+    public bool sentMessage = false;
 	// Use this for initialization
 	void Start () {
 		
@@ -14,10 +15,12 @@ public class FadingPiece : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (numberToStartAnimation == 1)
+        if (numberToStartAnimation == 1 && sentMessage == false)
         {
             numberToStartAnimation = 2;
             finishFading();
+            sentMessage = true;
+            StartCoroutine(messageTimeout());
         }
 
         if (numberToStartAnimation == -1)
@@ -29,11 +32,21 @@ public class FadingPiece : MonoBehaviour {
 
     public void finishFading()
     {
-        tr.pieceFinishedFading();
+        Animator anim = this.GetComponent<Animator>();
+        anim.SetBool("PieceIsFade", true);
+        tr.pieceFinishedFading(index);
     }
 
     public void finishReverseFading()
     {
 
+    }
+
+    
+
+    IEnumerator messageTimeout()
+    {
+        yield return new WaitForSeconds(2);
+        sentMessage = false;
     }
 }

@@ -12,9 +12,11 @@ public class transformation : MonoBehaviour
     public Text counterTextUI;
     public int indexOfLastPiece;
     public ParticleSystem particleSystemWhenPieceIsGone;
+
+    public ParticleSystem particleSystemWhenPieceIsGone2;
     public bool fading = false;
     public bool initialFade = false;
-
+    public bool animationPaused = false;
 
     // Use this for initialization
     void Start()
@@ -32,30 +34,50 @@ public class transformation : MonoBehaviour
             print("space key was pressed");
         }
 
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKey("up"))
         {
             //nextPieceDissapearEvent();
             //startFadingHead();
-
-            print("space key was pressed");
+            pauseAnimations();
+            print("up key was pressed");
         }
 
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKey("left"))
         {
             //nextPieceDissapearEvent();
             //startFadingHead();
-            print("space key was pressed");
+            resumePlayingInSameDirectionHead();
+            print("left key was pressed");
+        }
+
+        if (Input.GetKey("down"))
+        {
+            //nextPieceDissapearEvent();
+            //startFadingHead();
+            print("down key was pressed");
         }
 
 
         if (lookingAtEyes)
-        {   
+        {
             numberOfSecondContinous = numberOfSecondContinous + Time.deltaTime;
             counterTextUI.text = numberOfSecondContinous + "";
-            if (numberOfSecondContinous > 8 && initialFade == false)
+            if (numberOfSecondContinous > 5 && initialFade == false)
             {
                 startFadingHead();
                 initialFade = true;
+            }
+            if (animationPaused == true)
+            {
+                resumePlayingInSameDirectionHead();
+                animationPaused = false;
+            }
+        }
+        else {
+            if (initialFade == true && animationPaused == false)
+            {
+                pauseAnimations();
+                animationPaused = true;
             }
         }
 
@@ -69,7 +91,11 @@ public class transformation : MonoBehaviour
             activateFadeAnimation(piecesOfMask[indexOfLastPiece]);
             indexOfLastPiece++;
             particleSystemWhenPieceIsGone.Clear();
+            particleSystemWhenPieceIsGone.time = 0;
             particleSystemWhenPieceIsGone.Play();
+            particleSystemWhenPieceIsGone2.Clear();
+            particleSystemWhenPieceIsGone2.time = 0;
+            particleSystemWhenPieceIsGone2.Play();
         }
     }
 
@@ -90,6 +116,8 @@ public class transformation : MonoBehaviour
             if (fading)
             {
                 Animator anim = piecesOfMask[i].GetComponent<Animator>();
+
+                Debug.Log("Reanimate object " + piecesOfMask[i].name);
                 anim.SetFloat("Speed", 1f);
             }
             else
@@ -104,6 +132,8 @@ public class transformation : MonoBehaviour
     public void activateFadeAnimation(GameObject piece)
     {
         Animator anim = piece.GetComponent<Animator>();
+
+        Debug.Log("Activate object " + piece.name);
         anim.SetFloat("Speed",1f);
         anim.SetBool("Fade", true);
         //piece.SetActive(false);
@@ -111,6 +141,7 @@ public class transformation : MonoBehaviour
 
     public void PauseSingleAnimation(GameObject piece)
     {
+        Debug.Log("Pause object "+piece.name);
         Animator anim = piece.GetComponent<Animator>();
         anim.SetFloat("Speed", 0f);
         //anim.SetBool("Fade", true);
@@ -131,7 +162,13 @@ public class transformation : MonoBehaviour
             activateFadeAnimation(piecesOfMask[indexOfLastPiece]);
             indexOfLastPiece++;
             particleSystemWhenPieceIsGone.Clear();
+            particleSystemWhenPieceIsGone.time = 0;
             particleSystemWhenPieceIsGone.Play();
+
+
+            particleSystemWhenPieceIsGone2.Clear();
+            particleSystemWhenPieceIsGone2.time = 0;
+            particleSystemWhenPieceIsGone2.Play();
         }
     }
 
@@ -146,19 +183,30 @@ public class transformation : MonoBehaviour
 
     public void pauseAnimations()
     {
-
+        for (int i = 0; i < piecesOfMask.Count; i++)
+        {
+            // Animator anim = piecesOfMask[i].GetComponent<Animator>();
+            PauseSingleAnimation(piecesOfMask[i]);
+        }
     }
 
-    public void pieceFinishedFading()
+    public void pieceFinishedFading(int index)
     {
         if (fading == true)
         {
-            if (indexOfLastPiece < piecesOfMask.Count)
+            if (index < piecesOfMask.Count)
             {
+                Debug.Log("Restart Particles");
+                indexOfLastPiece = index;
                 activateFadeAnimation(piecesOfMask[indexOfLastPiece]);
-                indexOfLastPiece++;
                 particleSystemWhenPieceIsGone.Clear();
+                particleSystemWhenPieceIsGone.time = 0;
                 particleSystemWhenPieceIsGone.Play();
+
+
+                particleSystemWhenPieceIsGone2.Clear();
+                particleSystemWhenPieceIsGone2.time = 0;
+                particleSystemWhenPieceIsGone2.Play();
             }
         }
     }
