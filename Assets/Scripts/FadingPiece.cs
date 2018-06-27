@@ -19,7 +19,13 @@ public class FadingPiece : MonoBehaviour {
             numberToStartAnimation = 2;
             finishFading();
         }
-	}
+
+        if (numberToStartAnimation == -1)
+        {
+            numberToStartAnimation = 2;
+            finishReverseFading();
+        }
+    }
 
     public void finishFading()
     {
